@@ -1,0 +1,123 @@
+:root {
+  --font-family-main: "Helvetica";
+
+  --font-size-h1: 3.2rem;
+  --font-line-h1: 100%;
+  --H1: var(--font-size-h1)/ var(--font-line-h1) var(--font-family-main);
+
+  --font-size-h2: 2.4rem;
+  --font-line-h2: 100%;
+  --H2: var(--font-size-h2)/ var(--font-line-h2) var(--font-family-main);
+
+  --font-size-h3: 2rem;
+  --font-line-h3: 120%;
+  --H3: var(--font-size-h3)/ var(--font-line-h3) var(--font-family-main);
+
+  --font-size-h4: 1.6rem; 
+  --font-line-h4: 120%;
+  --H4: var(--font-size-h4)/ var(--font-line-h4) var(--font-family-main);
+
+  --font-size-p1: 2rem;
+  --font-line-p1: 120%;
+  --P1: var(--font-size-p1)/ var(--font-line-p1) var(--font-family-main);
+
+  --font-size-p2: 1.6rem; 
+  --font-line-p2: 120%;
+  --P2: var(--font-size-p2)/ var(--font-line-p2) var(--font-family-main);
+  
+  --font-size-p3: 1.4rem; 
+  --font-line-p3: 120%;
+  --P3: var(--font-size-p3)/ var(--font-line-p3) var(--font-family-main);
+
+
+  --font-size-description: 1.2rem; 
+  --font-line-description: 120%;
+  --Description: var(--font-size-description)/ var(--font-line-description) var(--font-family-main);
+
+  --font-size-description2: 1rem; 
+  --font-line-description2: 120%;
+  --Description2: var(--font-size-description2)/ var(--font-line-description2) var(--font-family-main);
+
+
+  --black: #252528;
+  --main-color: #1a65af;
+  --white: #FFFFFF;
+  --dark-grey: #666666;
+  --blue: #4481DB;
+  --grey: #B3B3B3;
+  --light-grey: #D7D7D7;
+  --add-white: #F9F9FB;
+  --Yellow: #F2C94C;
+  --red: #D51E4A;
+  --green: #146626;
+    
+  --skeleton-color: #E5E5E5;
+  --skeleton-shadow: rgba(0 0 0 / 20%);
+
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 62.5%; // ( 10px / 16px) * 100 every 1rem= 10px
+  width: 100%;
+  line-height: 1.5vw;
+  text-rendering: optimizelegibility;
+}
+
+*::-webkit-scrollbar {
+  width: 7px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #B3B3B3;
+  border-radius: 20px;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  width: 100%;
+  position: relative;
+   background: var(--white);
+  min-height: 100vh;
+  font: var(--H1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+input,
+button,
+textarea,
+select {
+  margin: 0;
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+  body {
+    overflow: overlay;
+  }
+}

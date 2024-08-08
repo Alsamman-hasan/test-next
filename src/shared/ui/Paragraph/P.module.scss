@@ -1,0 +1,41 @@
+.Pf {
+  font: var(--P1);
+  font-weight: 400;
+}
+
+.Ps {
+  font: var(--P2);
+  font-weight: 400;
+}
+
+.Pth {
+  font: var(--P3);
+  font-weight: 400;
+}
+
+.desc {
+  font: var(--Description);
+  font-weight: 400;
+}
+
+@media screen and (width <= 425px) {
+
+  .Pf {
+    font: var(--P1);
+    font-weight: 400;
+  }
+
+  .Ps {
+    font: var(--P3) !important;
+    font-weight: 400;
+  }
+
+  .Pth {
+    font: var(--P3);
+    font-weight: 400;
+  }
+
+  .desc {
+    font: var(--Description2);
+  }
+}

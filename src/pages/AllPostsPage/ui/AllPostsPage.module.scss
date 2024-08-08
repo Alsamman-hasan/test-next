@@ -1,0 +1,13 @@
+.AllPostsPage {
+  padding: 5rem 10rem;
+}
+.item {
+  min-height: 10rem;
+  cursor: pointer;
+  border: 1px solid var(--dark-grey);
+  padding: 1rem;
+  border-radius: 1rem;
+  &:hover {
+    background-color: var(--light-grey);
+  }
+}

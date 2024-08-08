@@ -1,0 +1,16 @@
+.AddPostModal {
+  background-color: #eeeeee;
+  padding: 2rem;
+  min-width: 60rem;
+}
+
+.btn {
+  text-transform: lowercase;
+  width: 50%;
+  min-height: 40px;
+  padding: 0.8rem;
+  font: var(--Description);
+}
+.error {
+  color: var(--red);
+}
