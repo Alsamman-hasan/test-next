@@ -6,7 +6,7 @@ import { HStack, VStack } from '@/shared/ui/Stack';
 import { ButtonUi } from '@/shared/ui/Buttons/ButtonUi';
 import { Input } from '@/shared/ui/Inputs';
 import { Htag } from '@/shared/ui/Htage/Htage';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { useUpdateForm } from '../../model/lib/useUpdateForm';
 import { errorHandler, errorMessage } from '@/shared/lib/ErrorHandlers/errorHandler';
 import { useCreatePost } from '@/shared/lib/hooks';
@@ -26,7 +26,7 @@ const AddPostModal = (props: AddPostModalProps) => {
   const { formData, onChangeData } = useUpdateForm(error, handelError)
   const create = useCreatePost(formData)
 
-  const onCreatePost = () => {
+  const onCreatePost = useCallback(() => {
     const err = errorHandler(formData, ['body', 'title']);
     if (err) {
       handelError(err);
@@ -36,14 +36,14 @@ const AddPostModal = (props: AddPostModalProps) => {
         onClose()
       }
     }
-  }
+  }, [onClose, create])
 
   useEffect(() => {
     if (create.isSuccess) {
       push(`/Posts/${create.data.id}`)
       onClose()
     }
-  }, [create])
+  }, [create, onClose, push])
   return (
     <Dialog
       open={open}
