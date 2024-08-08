@@ -52,7 +52,7 @@ export const AllPostsPage = (props: AllPostsPageProps) => {
     <VStack max gap={4} align='center' className={classNames(cls.AllPostsPage, {}, [className])}>
       <HStack max justify='between'>
         <Htag tage='h1'> all Posts</Htag>
-        <ButtonUi layOut='TextOnly' name='create' onClick={onOpenModal}>
+        <ButtonUi layOut='TextOnly' name='creater' onClick={onOpenModal}>
           create Post
         </ButtonUi>
       </HStack>

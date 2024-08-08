@@ -36,7 +36,7 @@ const AddPostModal = (props: AddPostModalProps) => {
         onClose()
       }
     }
-  }, [onClose, create])
+  }, [onClose, create, formData])
 
   useEffect(() => {
     if (create.isSuccess) {

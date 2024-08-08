@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, memo, ReactNode, SVGProps } from 'react';
+import { ButtonHTMLAttributes, ReactNode, SVGProps } from 'react';
 import cls from './Button.module.scss';
 import { LoaderBTN } from './LoaderBTN';
 import { classNames } from '../../lib/classNames/classNames';
@@ -36,7 +36,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   name: string;
 }
 
-export const ButtonUi = memo((props: ButtonProps) => {
+export const ButtonUi = (props: ButtonProps) => {
   const {
     className,
     children,
@@ -71,4 +71,4 @@ export const ButtonUi = memo((props: ButtonProps) => {
       </>
     </button>
   );
-});
+};
