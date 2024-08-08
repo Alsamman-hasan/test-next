@@ -121,3 +121,9 @@ a {
     overflow: overlay;
   }
 }
+
+.snackbar {
+  #notistack-snackbar {
+    font: var(--Description);
+  }
+}
