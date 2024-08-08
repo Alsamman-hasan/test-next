@@ -16,15 +16,3 @@ export const errorMessage = (value: string, name: string, error?: string[]) => {
   }
   return undefined;
 };
-
-export const errorBasic = (
-  value: string,
-  message: string,
-  error?: string[],
-) => {
-  if (error) {
-    if (error.includes(value)) return message;
-    return undefined;
-  }
-  return undefined;
-};

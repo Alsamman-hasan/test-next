@@ -1,25 +1,20 @@
-import { classNames } from "@/shared/lib/classNames/classNames";
-import cls from "./Comments.module.scss";
+
 import { usePostComments } from '../../model/service/fetchComment/fetchComment';
 import { VStack } from '@/shared/ui/Stack';
 import { PTag } from '@/shared/ui/Paragraph/P';
 import { Loader } from '@/shared/ui/Loader/LoaderUi';
 import { Htag } from '@/shared/ui/Htage/Htage';
-import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-import Divider from '@mui/material/Divider';
 import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
-import Typography from '@mui/material/Typography';
 
 export interface CommentsProps {
-  className?: string;
   id?:string;
 }
 
 export const Comments = (props: CommentsProps) => {
-  const { className, id } = props;
+  const { id } = props;
   const { data, isPending, isError } = usePostComments(id)
 
   if (isPending) return <Loader />;

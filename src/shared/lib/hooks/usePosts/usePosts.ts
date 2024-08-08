@@ -12,7 +12,7 @@ function paginate(array:Post[], page: number, step: number) {
 }
 
 const fetchPosts = async (page = 1, step = 10): Promise<Response> => {
-  const response = await fetch(`${process.env.API_URL}/posts`)
+  const response = await fetch(`https://jsonplaceholder.typicode.com/posts`)
   const data = await response.json()
   const totalPages = data.length;
   const posts = paginate(data, page, step)
@@ -25,7 +25,7 @@ const fetchPosts = async (page = 1, step = 10): Promise<Response> => {
 
 async function createPost(params: Post) {
   const response = fetch(
-    `${process.env.API_URL}/posts`,
+    `https://jsonplaceholder.typicode.com/posts`,
     {
       method: 'POST',
       headers: {

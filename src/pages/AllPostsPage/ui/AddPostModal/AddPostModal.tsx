@@ -21,7 +21,7 @@ const AddPostModal = (props: AddPostModalProps) => {
   const [error, setError] = useState<string[]>([])
   const {push} = useRouter()
   const handelError = (err:string[]) => {
-    setError(err)
+    setError(err);
   }
   const { formData, onChangeData } = useUpdateForm(error, handelError)
   const create = useCreatePost(formData)
@@ -36,14 +36,15 @@ const AddPostModal = (props: AddPostModalProps) => {
         onClose()
       }
     }
-  }, [onClose, create, formData])
+  }, [onClose, create, formData]);
 
   useEffect(() => {
     if (create.isSuccess) {
       push(`/Posts/${create.data.id}`)
       onClose()
     }
-  }, [create, onClose, push])
+  }, [create, onClose, push]);
+
   return (
     <Dialog
       open={open}
