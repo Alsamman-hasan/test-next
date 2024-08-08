@@ -13,7 +13,7 @@ export const useUpdateForm = (error: string[], handelError: (error: string[]) =>
         }
       setFormData(prev => ({ ...prev,  [name]: value }));
     },
-    [error],
+    [error, handelError],
   );
 
   return {
