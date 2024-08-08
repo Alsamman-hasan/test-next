@@ -9,8 +9,8 @@ import { Htag } from '@/shared/ui/Htage/Htage';
 import { useCallback, useEffect, useState } from 'react';
 import { useUpdateForm } from '../../model/lib/useUpdateForm';
 import { errorHandler, errorMessage } from '@/shared/lib/ErrorHandlers/errorHandler';
-import { useCreatePost } from '@/shared/lib/hooks';
 import { useRouter } from 'next/navigation';
+import { useCreatePost } from '../../model/service/createPost/createPost';
 
 export interface AddPostModalProps {
   open: boolean;

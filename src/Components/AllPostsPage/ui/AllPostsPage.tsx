@@ -4,7 +4,6 @@ import { useCallback, useState } from 'react';
 import { classNames } from "@/shared/lib/classNames/classNames";
 import cls from "./AllPostsPage.module.scss";
 import { Loader } from '@/shared/ui/Loader/LoaderUi';
-import { usePosts } from '@/shared/lib/hooks';
 import { Htag } from '@/shared/ui/Htage/Htage';
 import { HStack, VStack } from '@/shared/ui/Stack';
 import { PTag } from '@/shared/ui/Paragraph/P';
@@ -14,6 +13,7 @@ import { StepsSelect } from '@/shared/ui/StepsSelect';
 import Link from 'next/link';
 import { ButtonUi } from '@/shared/ui/Buttons/ButtonUi';
 import AddPostModal from './AddPostModal/AddPostModal';
+import { usePosts } from '../model/service/fetchPosts/fetchPosts';
 
 export interface AllPostsPageProps {
   className?: string;

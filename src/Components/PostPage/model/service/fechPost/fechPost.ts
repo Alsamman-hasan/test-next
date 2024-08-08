@@ -1,8 +1,9 @@
+import { $api } from '@/shared/api/api';
 import { useQuery } from '@tanstack/react-query'
 
 const fetchPost = async (id?: string): Promise<Post> => {
-  const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
-  const data = await response.json()
+  const response = await $api.get(`/posts/${id}`)
+  const data = await response.data
   return data;
 }
 
