@@ -6,7 +6,7 @@ import { CommentItem } from '../../types/comment';
 
 async function fetchComment(postId?: string): Promise<CommentItem[]> {
   const response = fetch(
-    `https://jsonplaceholder.typicode.com/comments?postId=${postId}`,
+    `${process.env.API_URL}/comments?postId=${postId}`,
   )
     .then((response) => {
       return response.json()
