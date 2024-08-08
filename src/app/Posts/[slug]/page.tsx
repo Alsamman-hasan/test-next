@@ -1,4 +1,4 @@
-import { PostPage } from '@/pages/PostPage';
+import { PostPage } from '@/Components/PostPage';
 import { Wrapper } from '@/shared/ui/Wrapper/Wrapper';
 
 export default function Post() {

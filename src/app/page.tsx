@@ -1,4 +1,4 @@
-import { AllPostsPage } from '@/pages/AllPostsPage';
+import { AllPostsPage } from '@/Components/AllPostsPage';
 import { Wrapper } from '@/shared/ui/Wrapper/Wrapper';
 
 export default function Home() {
